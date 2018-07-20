@@ -1,0 +1,11 @@
+﻿ParticleFireSimulation.obj : error LNK2019: unresolved external symbol _SDL_CreateWindow referenced in function "int __cdecl SDL_main(int,char *)" (?SDL_main@@YAHHPAD@Z)
+ParticleFireSimulation.obj : error LNK2019: unresolved external symbol _SDL_CreateRenderer referenced in function "int __cdecl SDL_main(int,char *)" (?SDL_main@@YAHHPAD@Z)
+ParticleFireSimulation.obj : error LNK2019: unresolved external symbol _SDL_SetRenderDrawColor referenced in function "int __cdecl SDL_main(int,char *)" (?SDL_main@@YAHHPAD@Z)
+ParticleFireSimulation.obj : error LNK2019: unresolved external symbol _SDL_RenderClear referenced in function "int __cdecl SDL_main(int,char *)" (?SDL_main@@YAHHPAD@Z)
+ParticleFireSimulation.obj : error LNK2019: unresolved external symbol _SDL_RenderPresent referenced in function "int __cdecl SDL_main(int,char *)" (?SDL_main@@YAHHPAD@Z)
+ParticleFireSimulation.obj : error LNK2019: unresolved external symbol _SDL_Delay referenced in function "int __cdecl SDL_main(int,char *)" (?SDL_main@@YAHHPAD@Z)
+ParticleFireSimulation.obj : error LNK2019: unresolved external symbol _SDL_Init referenced in function "int __cdecl SDL_main(int,char *)" (?SDL_main@@YAHHPAD@Z)
+MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
+N:\Programming\C++\Development Kits\SDL2-2.0.8\lib\x64\SDL2.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+N:\Programming\C++\Development Kits\SDL2-2.0.8\lib\x64\SDL2main.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+N:\Programming\C++\ParticleFireSimulation\Debug\ParticleFireSimulation.exe : fatal error LNK1120: 8 unresolved externals
