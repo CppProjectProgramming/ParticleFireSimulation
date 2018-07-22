@@ -15,12 +15,11 @@ private:
 	Uint32*		m_buffer = nullptr;
 
 public:
-	Screen();
-	~Screen();
 	bool Init();
 	bool ProcessEvents();
 	void Close();
-
+	void Update();
+	void SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
 };
 
 

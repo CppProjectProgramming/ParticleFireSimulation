@@ -3,16 +3,6 @@
 
 #undef main
 
-Screen::Screen()
-{
-
-}
-
-
-Screen::~Screen()
-{
-
-}
 
 bool Screen::Init()
 {
@@ -41,11 +31,6 @@ bool Screen::Init()
 	{
 		m_buffer[i] = 0xffff00ff;
 	}
-
-	SDL_UpdateTexture(m_texture, nullptr, m_buffer, WIDTH * sizeof(Uint32));
-	SDL_RenderClear(m_renderer);
-	SDL_RenderCopy(m_renderer, m_texture, nullptr, nullptr);
-	SDL_RenderPresent(m_renderer);
 
 	if (!m_renderer)
 	{
@@ -76,6 +61,32 @@ bool Screen::ProcessEvents()
 
 	return true;
 }
+
+
+
+void Screen::Update()
+{
+	SDL_UpdateTexture(m_texture, nullptr, m_buffer, WIDTH * sizeof(Uint32));
+	SDL_RenderClear(m_renderer);
+	SDL_RenderCopy(m_renderer, m_texture, nullptr, nullptr);
+	SDL_RenderPresent(m_renderer);
+}
+
+void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue)
+{
+	Uint32 color = 0;
+	
+	color += red;
+	color <<= 8;
+	color += green;
+	color <<= 8;
+	color += blue;
+	color <<= 8;
+	color += 0xFF;
+
+	m_buffer[(y * WIDTH) + x] = color;
+}
+
 
 void Screen::Close()
 {
