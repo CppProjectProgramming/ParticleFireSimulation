@@ -74,6 +74,12 @@ void Screen::Update()
 
 void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue)
 {
+	// Check if the pixel is in range of the screen so we can plot it correctly.
+	if (x < 0 || x >= Screen::WIDTH || y < 0 || y >= Screen::HEIGHT)
+	{
+		return;
+	}
+
 	Uint32 color = 0;
 	
 	color += red;
