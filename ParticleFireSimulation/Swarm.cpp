@@ -4,16 +4,29 @@
 
 Swarm::Swarm()
 {
-	particle = new Particle[NPARTICLES];
+	particles = new Particle[NPARTICLES];
 }
 
-
-Swarm::~Swarm()
-{
-	delete[] particle;
-}
 
 Particle * Swarm::GetParticles() const
 {
-	return particle;
+	return particles;
 }
+
+void Swarm::Update()
+{
+	for (int i = 0; i < NPARTICLES; i++)
+	{
+		particles[i].UpdatePosition();
+	}
+	
+}
+
+Swarm::~Swarm()
+{
+	delete[] particles;
+}
+
+
+
+

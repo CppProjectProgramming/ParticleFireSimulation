@@ -4,14 +4,14 @@
 class Swarm
 {
 public:
-	const static int NPARTICLES = 5000;
+	const static int NPARTICLES = 1000;
 private:
-	Particle * particle;
+	Particle * particles;
 
 public:
 	Swarm();
 	~Swarm();
-
+	void Update();
 	Particle *GetParticles() const;
 };
 

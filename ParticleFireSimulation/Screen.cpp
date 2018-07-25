@@ -93,6 +93,23 @@ void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue)
 	m_buffer[(y * WIDTH) + x] = color;
 }
 
+void Screen::Clear()
+{
+	memset(m_buffer, 0, WIDTH* HEIGHT * sizeof(Uint32));
+}
+
+
+void Screen::SetBackgroundColor(Uint8 red, Uint8 green, Uint8 blue)
+{
+	for (int y = 0; y < Screen::HEIGHT; y++)
+	{
+		for (int x = 0; x < Screen::WIDTH; x++)
+		{
+			SetPixel(x, y, red, green, blue);
+		}
+	}
+}
+
 
 void Screen::Close()
 {
