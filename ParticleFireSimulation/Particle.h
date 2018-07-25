@@ -4,9 +4,8 @@ struct Particle
 	double xPos;
 	double yPos;
 
-	double xSpeed;
-	double ySpeed;
-
+	double speed;
+	double direction;
 public:
 	Particle();
 	~Particle();

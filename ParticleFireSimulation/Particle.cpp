@@ -2,14 +2,13 @@
 #include "Particle.h"
 #include <time.h>
 
-Particle::Particle()
+# define M_PI           3.14159265358979323846  /* pi */
+
+Particle::Particle() : xPos(0), yPos(0)
 {
 	// Setting X and Y as a random number from 
-	xPos = ((2.0 * rand()) / RAND_MAX) - 1;
-	yPos = ((2.0 * rand()) / RAND_MAX) - 1;
-
-	xSpeed = 0.001 * (((2.0 * rand()) / RAND_MAX) - 1);
-    ySpeed = 0.001 * (((2.0 * rand()) / RAND_MAX) - 1);
+	direction = (2 * M_PI * rand()) / RAND_MAX;
+	speed = (0.001 * rand()) / RAND_MAX;
 }
 
 
@@ -19,15 +18,9 @@ Particle::~Particle()
 
 void Particle::UpdatePosition()
 {
+	double xSpeed = speed * cos(direction);
+	double ySpeed = speed * sin(direction);
+	
 	xPos += xSpeed;
 	yPos += ySpeed;
-
-	if (xPos <= -1.0 || xPos >= 1.0)
-	{
-		xSpeed = -xSpeed;
-	}
-	if (yPos <= -1.0 || yPos >= 1.0)
-	{
-		ySpeed = -ySpeed;
-	}
 }
