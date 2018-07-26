@@ -12,7 +12,9 @@ private:
 	SDL_Window * m_window = nullptr;
 	SDL_Renderer* m_renderer = nullptr;
 	SDL_Texture*  m_texture = nullptr;
-	Uint32*		m_buffer = nullptr;
+	Uint32*		m_buffer1 = nullptr;
+	Uint32*		m_buffer2 = nullptr;
+
 
 public:
 	bool Init();
@@ -22,6 +24,7 @@ public:
 	void SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
 	void SetBackgroundColor(Uint8 red, Uint8 green, Uint8 blue);
 	void Clear();
+	void BoxBlur();
 };
 
 
