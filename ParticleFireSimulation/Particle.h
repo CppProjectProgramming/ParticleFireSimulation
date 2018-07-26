@@ -10,6 +10,6 @@ public:
 	Particle();
 	~Particle();
 
-	void UpdatePosition();
+	void UpdatePosition(int interval);
 };
 

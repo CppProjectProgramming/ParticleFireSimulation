@@ -1,8 +1,2 @@
-﻿  ParticleFireSimulation.cpp
-n:\programming\c++\particlefiresimulation\particlefiresimulation\particlefiresimulation.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-n:\programming\c++\particlefiresimulation\particlefiresimulation\particlefiresimulation.cpp(35): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-n:\programming\c++\particlefiresimulation\particlefiresimulation\particlefiresimulation.cpp(36): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-n:\programming\c++\particlefiresimulation\particlefiresimulation\particlefiresimulation.cpp(37): warning C4244: 'initializing': conversion from 'double' to 'unsigned char', possible loss of data
-n:\programming\c++\particlefiresimulation\particlefiresimulation\particlefiresimulation.cpp(45): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-n:\programming\c++\particlefiresimulation\particlefiresimulation\particlefiresimulation.cpp(46): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+﻿  Particle.cpp
   ParticleFireSimulation.vcxproj -> N:\Programming\C++\ParticleFireSimulation\x64\Debug\ParticleFireSimulation.exe
